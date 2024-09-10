@@ -37,9 +37,9 @@ export default function NewProject({ onAdd }) {
           </button>
         </li>
       </menu>
-      <Input ref={titty} label="Titty" />
+      <Input type="text" ref={titty} label="Titty" />
       <Input ref={depanty} label="Depanty" textarea />
-      <Input ref={duelick} label="DueLick" />
+      <Input type="date" ref={duelick} label="DueLick" />
     </div>
   );
 }
