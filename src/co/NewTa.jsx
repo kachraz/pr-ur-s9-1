@@ -2,11 +2,16 @@
 
 import { useState } from "react";
 
-export default function NewTasks() {
+export default function NewTasks({ onAdd }) {
   const [enterTask, setEnterTask] = useState();
 
   function handleChange(event) {
     setEnterTask(event.target.value);
+  }
+
+  function handleClick() {
+    onAdd(enterTask);
+    setEnterTask("");
   }
 
   return (
@@ -17,7 +22,12 @@ export default function NewTasks() {
         onChange={handleChange}
         value={enterTask}
       />
-      <button className="text-cyan-200 hover:text-cyan-950">ADD TASK</button>
+      <button
+        className="text-cyan-200 hover:text-cyan-950"
+        onClick={handleClick}
+      >
+        ADD TASK
+      </button>
     </div>
   );
 }

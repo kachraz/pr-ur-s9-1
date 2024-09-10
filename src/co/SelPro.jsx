@@ -2,7 +2,12 @@
 
 import Tasks from "./Tasks.jsx";
 
-export default function SelectedProject({ project, onDelete }) {
+export default function SelectedProject({
+  project,
+  onDelete,
+  onAddTask,
+  onDeleteTask,
+}) {
   const formattedDate = new Date(project.duelick).toLocaleDateString("en-us", {
     year: "numeric",
     month: "long",
@@ -28,7 +33,7 @@ export default function SelectedProject({ project, onDelete }) {
           {project.depanty}
         </p>
       </header>
-      <Tasks />
+      <Tasks onAdd={onAddTask} onDelete={onDeleteTask} />
     </div>
   );
 }
