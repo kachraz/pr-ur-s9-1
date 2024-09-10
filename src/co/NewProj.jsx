@@ -3,7 +3,7 @@ import Input from "./Input.jsx";
 import Modal from "./Moda.jsx";
 
 // new Project component here
-export default function NewProject({ onAdd }) {
+export default function NewProject({ onAdd, onCancel }) {
   const modal = useRef();
 
   const titty = useRef();
@@ -46,7 +46,10 @@ export default function NewProject({ onAdd }) {
       <div className="w-[35rem] mt-16">
         <menu className="flex items-center justify-end gap-4 my-4">
           <li>
-            <button className="text-emerald-300 hover:bg-cyan-400 hover:text-rose-900 bg-indigo-700 px-6 py-2 rounded-md ">
+            <button
+              className="text-emerald-300 hover:bg-cyan-400 hover:text-rose-900 bg-indigo-700 px-6 py-2 rounded-md"
+              onClick={onCancel}
+            >
               Cancel
             </button>
           </li>
