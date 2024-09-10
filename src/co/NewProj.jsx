@@ -35,9 +35,13 @@ export default function NewProject({ onAdd }) {
   return (
     <>
       <Modal ref={modal} buttonCaption="Okay">
-        <h2>WRONGINPUT</h2>
-        <p>ARE YOU STUPID ? ... no value</p>
-        <p>learn to read and enter value in the field</p>
+        <h2 className="text-xl font-bold text-emerald-500 mt-4 my-4">
+          WRONGINPUT
+        </h2>
+        <p className="text-indigo-400 mb-4">ARE YOU STUPID ? ... no value</p>
+        <p className="text-indigo-400 mb-4">
+          learn to read and enter value in the field
+        </p>
       </Modal>
       <div className="w-[35rem] mt-16">
         <menu className="flex items-center justify-end gap-4 my-4">
