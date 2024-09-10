@@ -3,7 +3,7 @@
 import npo from "../assets/np.png";
 import Button from "./Butt";
 
-export default function NoProjectSelected({ onStartAddPoject }) {
+export default function NoProjectSelected({ onStartAddProject }) {
   return (
     <div className="mt-24 text-center w-2/3">
       <img
@@ -16,7 +16,7 @@ export default function NoProjectSelected({ onStartAddPoject }) {
       </h2>
       <p className="text-indigo-400 mb-4">SelectSomethingIdiot</p>
       <p className="mt-8">
-        <Button onClick={onStartAddPoject}>CreatePanty</Button>
+        <Button onClick={onStartAddProject}>CreatePanty</Button>
       </p>
     </div>
   );
