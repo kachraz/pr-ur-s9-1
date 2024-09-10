@@ -1,6 +1,6 @@
 //Selected Projects
 
-export default function SelectedProject({ project }) {
+export default function SelectedProject({ project, onDelete }) {
   const formattedDate = new Date(project.duelick).toLocaleDateString("en-us", {
     year: "numeric",
     month: "long",
@@ -14,7 +14,10 @@ export default function SelectedProject({ project }) {
           <h1 className="text-3xl font-bold text-emerable-600 mb-2">
             {project.titty}
           </h1>
-          <button className="text-emerald-600 hover:text-emerald-950">
+          <button
+            className="text-emerald-600 hover:text-emerald-950"
+            onClick={onDelete}
+          >
             Delete
           </button>
         </div>
