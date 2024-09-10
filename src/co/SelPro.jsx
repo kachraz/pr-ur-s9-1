@@ -7,6 +7,7 @@ export default function SelectedProject({
   onDelete,
   onAddTask,
   onDeleteTask,
+  tasks,
 }) {
   const formattedDate = new Date(project.duelick).toLocaleDateString("en-us", {
     year: "numeric",
@@ -33,7 +34,7 @@ export default function SelectedProject({
           {project.depanty}
         </p>
       </header>
-      <Tasks onAdd={onAddTask} onDelete={onDeleteTask} />
+      <Tasks onAdd={onAddTask} onDelete={onDeleteTask} tasks={tasks} />
     </div>
   );
 }
