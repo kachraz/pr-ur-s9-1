@@ -20,7 +20,7 @@ export default function SelectedProject({ project }) {
         </div>
         <p className="mb-4 text-emerald-400">{formattedDate}</p>
         <p className="text-emerald-600 whitespace-pre-wrap">
-          {project.description}
+          {project.depanty}
         </p>
       </header>
       TASKS
